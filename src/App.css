@@ -23,18 +23,32 @@ body {
     rgba(100, 115, 255, 1) 100%
   );
 }
+
 .todo-app {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 520px;
-  min-height: 600px;
+  width: 100%;
+  min-height: 100vh;
   background: #161a2b;
   text-align: center;
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
 }
+
+@media screen and (min-width: 300px) {
+  .todo-app {
+    width: 80%; /* Adjusted for 80% width on tablets */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .todo-app {
+    width: 520px; /* Retain the original width for desktops */
+  }
+}
+
 
 h1 {
   margin: 32px 0;
